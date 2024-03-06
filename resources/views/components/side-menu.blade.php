@@ -24,7 +24,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fs-5" href="/resume/index">
+                <a class="nav-link fs-5" href="/student">
                 <span  class="align-text-bottom bi bi-person"></span>
                 Students
                 </a>
