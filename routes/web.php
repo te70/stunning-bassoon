@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
-
+use App\Http\Controllers\TravelController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,6 +25,12 @@ Route::middleware('auth')->group(function () {
         Route::get('/student/edit/{id}', 'edit')->name('student.edit');
         Route::put('/student/update/{id}', 'update')->name('student.update');
         Route::delete('/student/delete/{id}', 'destroy')->name('student.delete');
+    });
+
+    Route::controller(TravelController::class)->group(function (){
+        Route::get('/check', 'index')->name('check.index');
+        Route::post('/check/store', 'store');
+        Route::get('/travel', 'travel');
     });
 });
 

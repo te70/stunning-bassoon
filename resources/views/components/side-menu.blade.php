@@ -18,7 +18,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fs-5" href="/dashboard">
+                <a class="nav-link fs-5" href="/check">
                 <span class="align-text-bottom bi bi-cart"></span>
                 Check
                 </a>
@@ -36,7 +36,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fs-5" href="/users">
+                <a class="nav-link fs-5" href="/travel">
                 <span class="align-text-bottom bi bi-book"></span>
                 Travel logs
                 </a>
