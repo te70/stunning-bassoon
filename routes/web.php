@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/check', 'index')->name('check.index');
         Route::post('/check/store', 'store');
         Route::get('/travel', 'travel');
+        Route::delete('/travel/delete/{id}', 'destroy')->name('travel.delete');
     });
 });
 

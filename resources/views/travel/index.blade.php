@@ -14,32 +14,24 @@
                                 <table id="example" class="table table-striped w-100">
                                     <thead>
                                         <tr>
-                                            <th>Student name</th>
                                             <th>Student ID</th>
-                                            <th>Phone number</th>
-                                            <th>ID expiry</th>
-                                            <th>Receipt expiry</th>
-                                            <th>Receipt</th>
+                                            <th>Time logged</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            {{-- @foreach($students as $key=>$student) --}}
-                                            <td class="text-uppercase"></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            @foreach($logs as $key=>$log)
+                                            <td>{{$log->student_id}}</td>
+                                            <td>{{$log->created_at}}</td>
                                             <td> 
                                                 <div class="dropup">
                                                 <a href="#" role="button" data-bs-toggle="dropdown">
                                                   <i style="color: black;" class="bi bi-three-dots-vertical"></i>
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                  <form action="" method="POST">
+                                                  <form action="{{ route('travel.delete', ['id' => $log->id]) }}" method="POST">
                                                     @csrf
-                                                    <a class="dropdown-item" href="">Update</a>
                                                     @method('DELETE')
                                                     <button type="submit" class="dropdown-item" href="">Delete</button>
                                                 </form> 
@@ -47,7 +39,7 @@
                                               </div>
                                             </td>
                                         </tr>
-                                        {{-- @endforeach --}}
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

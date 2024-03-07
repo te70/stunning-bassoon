@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use App\Models\Travel;
+use Exception;
 
 class TravelController extends Controller
 {
@@ -31,6 +32,18 @@ class TravelController extends Controller
 
     public function travel()
     {
-        return view('travel.index');
+        $logs = Travel::all();
+        return view('travel.index', compact('logs'));
+    }
+
+    public function destroy(Request $request)
+    {
+        try{
+            $deleteStudent=Travel::find($request->id);
+            $deleteStudent->delete();
+            return redirect('/travel');
+        } catch(Exception $e){
+            abort(500);
+        }
     }
 }
