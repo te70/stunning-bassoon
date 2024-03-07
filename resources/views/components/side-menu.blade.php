@@ -41,6 +41,12 @@
                 Mileage logs
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link fs-5" href="/users">
+                <span class="align-text-bottom bi bi-sliders"></span>
+                Settings
+                </a>
+            </li>
                 </div>
             </ul>
         </div>

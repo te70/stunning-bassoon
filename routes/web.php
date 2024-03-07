@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TravelController;
 use App\Http\Controllers\MileageController;
+use App\Http\Controllers\userController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -42,6 +43,15 @@ Route::middleware('auth')->group(function () {
         Route::get('/mileage/edit/{id}', 'edit')->name('mileage.edit');
         Route::put('/mileage/update/{id}', 'update')->name('mileage.update');
         Route::delete('/mileage/delete/{id}', 'destroy')->name('mileage.delete');
+    });
+
+    Route::controller(UserController::class)->group(function () {
+        Route::get('/users', 'index');
+        Route::get('/user/create', 'create')->name('user.create');
+        Route::post('/user/store', 'store')->name('user.store'); 
+        Route::get('/user/edit/{id}', 'edit')->name('user.edit');
+        Route::post('/user/update/{id}', 'update')->name('user.update');
+        Route::delete('/user/delete/{id}', 'destroy')->name('user.delete');
     });
 });
 
