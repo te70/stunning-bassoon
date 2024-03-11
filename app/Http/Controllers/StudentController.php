@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-use Exception;
+use Exception;use App\Mail\StudentRegisteredMail;
+use Illuminate\Support\Facades\Mail;
 
 class StudentController extends Controller
 {
@@ -30,12 +31,26 @@ class StudentController extends Controller
             $resume = new Student();
             $resume->student_name = $request->input('student_name'); 
             $resume->student_id = $request->input('student_id');
+            $resume->email = $request->input('email');
             $resume->phone_number = $request->input('phone_number');
             $resume->expiry_date = $request->input('expiry_date');
             $resume->receipt_expiry = $request->input('receipt_expiry');
             $resume->receipt_image = $name;
             $resume->save();
-            return redirect('/student');
+            // Mail::to($resume->email)->send(new StudentRegisteredMail());
+             $sent = Mail::to($resume->email)->send(new StudentRegisteredMail());
+
+            // Check if the email was sent successfully
+            if ($sent > 0) {
+                // Email was sent successfully
+                // Proceed with other registration logic...
+                return redirect('/student');
+            } else {
+                // Failed to send email
+                // Handle the failure or notify the user...
+                return redirect('/dashboard');
+            }
+            
         } catch(Exception $e){
             return redirect('/student');
         }

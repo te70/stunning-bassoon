@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('expiry_date');
             $table->string('receipt_expiry');
             $table->string('receipt_image');
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }

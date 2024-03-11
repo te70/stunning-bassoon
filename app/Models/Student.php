@@ -15,6 +15,7 @@ class Student extends Model
         'phone_number',
         'expiry_date',
         'receipt_image',
-        'receipt_expiry'
+        'receipt_expiry',
+        'email'
     ];
 }

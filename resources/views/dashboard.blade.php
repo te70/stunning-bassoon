@@ -14,16 +14,16 @@
                                 <div class="col-sm-6">
                                     <div class="card">
                                         <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Resumes</p>
+                                        <h5 class="card-title">{{$students->count()}}</h5>
+                                        <p class="card-text">Total students</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="card">
                                         <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Live jobs</p>
+                                        <h5 class="card-title">{{$paidStudents->count()}}</h5>
+                                        <p class="card-text">Paid students</p>
                                         </div>
                                     </div>
                                 </div>
@@ -32,8 +32,8 @@
                                 <div class="col-sm-6">
                                     <div class="card">
                                         <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Total jobs</p>
+                                        <h5 class="card-title">{{$consumption1}}</h5>
+                                        <p class="card-text">Mileage Bus 1</p>
                                         </div>
                                     </div>
                                 </div>

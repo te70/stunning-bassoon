@@ -30,6 +30,10 @@
                                       <input type="text" class="form-control" id="phoneNumber" name="phone_number">
                                     </div>
                                     <div class="col-md-6">
+                                      <label for="email" class="form-label">Email</label>
+                                      <input type="email" class="form-control" id="email" name="email">
+                                    </div>
+                                    <div class="col-md-6">
                                       <label for="receiptExpiry" class="form-label">Receipt expiry</label>
                                       <input type="date" class="form-control" id="receiptExpiry" name="receipt_expiry">
                                     </div>
