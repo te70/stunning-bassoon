@@ -13,7 +13,7 @@ class DashboardController extends Controller
     {
         $bus1 = 'KBX123D';
         $students = Student::all();
-        $paidStudents = Student::where('expiry_date','>', Carbon::now())->get();
+        $paidStudents = Student::where('receipt_expiry','>', Carbon::now())->get();
         $consumption1= Mileage::where('number_plate', $bus1)->sum('mileage');
         return view('dashboard', compact('students', 'paidStudents', 'consumption1'));
     }

@@ -19,7 +19,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link fs-5" href="/check">
-                <span class="align-text-bottom bi bi-cart"></span>
+                <span class="align-text-bottom bi bi-search"></span>
                 Check
                 </a>
             </li>
@@ -33,12 +33,6 @@
                 <a class="nav-link fs-5" href="/travel">
                 <span class="align-text-bottom bi bi-book"></span>
                 Travel logs
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link fs-5" href="/mileage">
-                <span class="align-text-bottom bi bi-speedometer"></span>
-                Mileage logs
                 </a>
             </li>
             <li class="nav-item">

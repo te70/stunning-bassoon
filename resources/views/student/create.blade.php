@@ -22,16 +22,16 @@
                                       <input type="text" class="form-control" id="studentId" name="student_id">
                                     </div>
                                     <div class="col-md-6">
-                                      <label for="idExpiry" class="form-label">ID Expiry</label>
-                                      <input type="date" class="form-control" id="idExpiry" name="expiry_date">
+                                      <label for="pickup" class="form-label">Pickup</label>
+                                      <input type="text" class="form-control" id="pickup" name="pickup">
                                     </div>
                                     <div class="col-md-6">
                                       <label for="phoneNumber" class="form-label">Phone number</label>
                                       <input type="text" class="form-control" id="phoneNumber" name="phone_number">
                                     </div>
                                     <div class="col-md-6">
-                                      <label for="email" class="form-label">Email</label>
-                                      <input type="email" class="form-control" id="email" name="email">
+                                      <label for="emergencyNumber" class="form-label">Emergency number</label>
+                                      <input type="text" class="form-control" id="emergencyNumber" name="emergency_number">
                                     </div>
                                     <div class="col-md-6">
                                       <label for="receiptExpiry" class="form-label">Receipt expiry</label>

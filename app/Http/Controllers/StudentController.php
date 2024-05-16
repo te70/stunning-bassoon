@@ -31,9 +31,9 @@ class StudentController extends Controller
             $resume = new Student();
             $resume->student_name = $request->input('student_name'); 
             $resume->student_id = $request->input('student_id');
-            $resume->email = $request->input('email');
+            $resume->pickup = $request->input('pickup');
             $resume->phone_number = $request->input('phone_number');
-            $resume->expiry_date = $request->input('expiry_date');
+            $resume->emergency_number = $request->input('emergency_number');
             $resume->receipt_expiry = $request->input('receipt_expiry');
             $resume->receipt_image = $name;
             $resume->save();

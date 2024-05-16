@@ -13,9 +13,9 @@ class Student extends Model
         'student_name',
         'student_id',
         'phone_number',
-        'expiry_date',
+        'emergency_number',
         'receipt_image',
         'receipt_expiry',
-        'email'
+        'residence'
     ];
 }

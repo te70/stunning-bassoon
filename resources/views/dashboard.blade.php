@@ -28,16 +28,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row pt-4 text-center">
-                                <div class="col-sm-6">
-                                    <div class="card">
-                                        <div class="card-body">
-                                        <h5 class="card-title">{{$consumption1}}</h5>
-                                        <p class="card-text">Mileage Bus 1</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         {{-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> --}}
                         </main>
                     </div>

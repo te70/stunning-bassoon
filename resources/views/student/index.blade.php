@@ -18,7 +18,8 @@
                                             <th>Student name</th>
                                             <th>Student ID</th>
                                             <th>Phone number</th>
-                                            <th>ID expiry</th>
+                                            <th>Emergency number</th>
+                                            <th>Pickup</th>
                                             <th>Receipt expiry</th>
                                             <th>Receipt</th>
                                             <th>Actions</th>
@@ -30,7 +31,8 @@
                                             <td class="text-uppercase">{{$student->student_name}}</td>
                                             <td>{{$student->student_id}}</td>
                                             <td>{{$student->phone_number}}</td>
-                                            <td>{{$student->expiry_date}}</td>
+                                            <td>{{$student->emergency_number}}</td>
+                                            <td>{{$student->pickup}}</td>
                                             <td>{{$student->receipt_expiry}}</td>
                                             <td><a class="badge text-bg-primary" href="{{ asset('receipts/'.$student->receipt_image) }}" target="_blank">View receipt</a></td>
                                             <td> 

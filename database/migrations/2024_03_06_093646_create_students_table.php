@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('student_name');
             $table->string('student_id')->unique();
             $table->string('phone_number');
-            $table->string('expiry_date');
+            $table->string('emergency_number');
             $table->string('receipt_expiry');
             $table->string('receipt_image');
-            $table->string('email')->unique();
+            $table->string('pickup');
             $table->timestamps();
         });
     }
